@@ -1,4 +1,3 @@
-import React from "react";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Banner from "./components/Banner";
@@ -8,8 +7,8 @@ const Inicio = () => {
   return (
     <div className="mainSection">
       <Banner />
-      <About/>
-      <SectionVideos/>
+      <About />
+      <SectionVideos />
       <Footer />
     </div>
   );

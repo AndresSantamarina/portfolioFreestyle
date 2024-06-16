@@ -13,9 +13,6 @@ const About = () => {
   const videoRef3 = useRef(null);
 
   useEffect(() => {
-    // Configuración del reproductor de video para cada video
-
-    // Video 1: showCamioneros
     const player1 = videojs(videoRef1.current, {
       autoplay: true,
       controls: true,
@@ -24,7 +21,6 @@ const About = () => {
       sources: [{ src: showCamioneros, type: "video/mp4" }],
     });
 
-    // Video 2: showFutsal
     const player2 = videojs(videoRef2.current, {
       autoplay: true,
       controls: true,
@@ -33,7 +29,6 @@ const About = () => {
       sources: [{ src: showFutsal, type: "video/mp4" }],
     });
 
-    // Video 3: showsGrales
     const player3 = videojs(videoRef3.current, {
       autoplay: true,
       controls: true,
@@ -42,19 +37,18 @@ const About = () => {
       sources: [{ src: showsGrales, type: "video/mp4" }],
     });
 
-    // Limpieza al desmontar el componente
     return () => {
       if (player1) {
-        player1.dispose(); // Liberar recursos del reproductor 1
+        player1.dispose();
       }
       if (player2) {
-        player2.dispose(); // Liberar recursos del reproductor 2
+        player2.dispose();
       }
       if (player3) {
-        player3.dispose(); // Liberar recursos del reproductor 3
+        player3.dispose();
       }
     };
-  }, []); // Se ejecuta solo una vez al montar el componente
+  }, []);
 
   return (
     <>
@@ -102,7 +96,7 @@ const About = () => {
               .
             </li>
           </ul>
-          <CarouselComponent/>
+          <CarouselComponent />
         </article>
 
         <article className="py-5">
